@@ -47,7 +47,7 @@ def main():
     scaler = MinMaxScaler(feature_range=(0,1))
     age_scaled = scaler.fit_transform(np.array(age).reshape(-1,1))[0][0]
     avg_glucose_level_scaled = scaler.transform(np.array(avg_glucose_level).reshape(-1,1))[0][0]
-    bmi_scaled = scaler.fit_transform(np.array(bmi).reshape(-1,1))[0][0]
+    bmi_scaled = scaler.transform(np.array(bmi).reshape(-1,1))[0][0]
 
     # Prediction button
     if st.button("Dự đoán"):
